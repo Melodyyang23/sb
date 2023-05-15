@@ -10,7 +10,7 @@ public class PipeSpawnerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        SpawnPipe();
     }
 
     // Update is called once per frame
@@ -22,9 +22,14 @@ public class PipeSpawnerScript : MonoBehaviour
         }
         else
         {
-            Instantiate(Pipe, transform.position, transform.rotation);
+            SpawnPipe();
             timer = 0;
         }
       
+    }
+    void SpawnPipe()
+    {
+        Instantiate(Pipe, transform.position, transform.rotation);
+
     }
 }
