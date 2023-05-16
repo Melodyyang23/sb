@@ -8,6 +8,7 @@ public class BirdScript : MonoBehaviour
     public Rigidbody2D MyRigidBody;
     public float FlapStregth;
     public LogicScript logic;
+    public GameObject Blood;
 
 
 
@@ -29,6 +30,8 @@ public class BirdScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+
+        Instantiate(Blood, transform.position, Quaternion.identity);
         logic.gameOver();
     }
 }
